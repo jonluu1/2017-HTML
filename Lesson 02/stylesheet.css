@@ -1,0 +1,7 @@
+body {background-color: blue;}
+h1, h2, p {color:purple; font-size:13px; text-align:center; background-color: rgb(117, 255, 213);}
+#y {color:yellow;}
+.y {color:green;}
+.x {text-align: right;}
+.z {background-color: red;}
+p.y {font-size: 25px;}

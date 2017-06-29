@@ -4,13 +4,7 @@
     <head>
         <title>Website</title>
         <style>
-        	body {background-color: blue;}
-            h1, h2, p {color:purple; font-size:13px; text-align:center; background-color: rgb(117, 255, 213);}
-            #y {color:yellow;}
-            .y {color:green;}
-            .x {text-align: right;}
-            .z {background-color: red;}
-            p.y {font-size: 25px;}
+        	
         </style>
     </head>
     
@@ -20,6 +14,7 @@
 	<a href="HelloWorld2.html">2nd Page</a>
     <p style="color:blue">The quick brown fox jumps over the lazy dog</p>
     <p id="y">The quick brown fox jumps over the lazy dog</p>
+    <button type="button" onclick='document.getElementByID("y").innerHTML = "Hello World"'>Click ME!</button>
     <p class="y">The quick brown fox jumps over the lazy dog</p>
     <p class="x">The quick brown fox jumps over the lazy dog</p>
     </body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calulator</title> 
+        <script>
+        	function functionReset(){
+            	document.getElementById("calulatorForm").reset();
+            }
+        	
+        	function calulate(){
+            	var form = document.getElementById("calulatorForm");
+                var firstDigit = parseInt(form.elements[0].value);
+                var operator = form.elements[1].value;
+                var secondDigit = parseInt(form.elements[2].value);
+                var answer = 0;
+                
+                if (operator == "add"){
+                	answer = firstDigit + secondDigit;
+                } else if (operator === "sub"){
+                	answer = firstDigit - secondDigit;
+                } else if (operator === "mul"){
+                	answer = firstDigit * secondDigit;
+                } else if (operator === "div"){
+                	answer = firstDigit / secondDigit;
+                }
+                
+                document.getElementById("answer").innerHTML = "= " + answer;
+ 
+            }
+        </script>
+    </head>
+    <body>
+    <h1>Calulator</h1>
+	<form id = "calulatorForm">
+    <input type = "text" name = "First Digit">
+    <select>
+    	<option value = "add">+</option>
+        <option value = "sub">-</option>
+        <option value = "mul">*</option>
+        <option value = "div">/</option>
+    </select>
+    <input type = "text" name = "Second Digit">
+    </form>
+    <p id = "answer" style = "font-size:25px">=</p>
+    <br>
+    <button onclick = "functionReset()">Reset</button>
+    <br>
+    <button onclick = "calulate()">Calulate</button>
+    </body>    
+</html>
