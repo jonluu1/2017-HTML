@@ -4,13 +4,14 @@
         <title>Calulator</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
         <script src = "script.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.13.3/math.min.js"></script>
     </head>
     <body>
 		<h1>Calulators</h1>
 		<ul id = "navBar">
 			<li><button onclick = "showHide('home')">Home</button>
 			<li><button onclick = "showHide('simpleCalulator')">Simple Calulator</button>
-			<li><button onclick = "showHide()">Advance Calulator</button>
+			<li><button onclick = "showHide('advanceCalulator')">Advance Calulator</button>
 		</ul>
 		<div id = "home" class = "calulator">
 			<p id = "welcome">Welcome to the calulator website!  Click on button to go to that calulator!</p>
@@ -18,20 +19,30 @@
 		<div id = "simpleCalulator" style = "display: none" class = "calulator">
 			<h2>Simple Calulator</h2>
 			<form id = "calulatorForm" autocomplete = "off">
-			<input type = "text" name = "First Number" placeholder = "First Number">
-			<select>
-				<option value = "add">+</option>
-				<option value = "sub">-</option>
-				<option value = "mul">*</option>
-				<option value = "div">/</option>
-				<option value = "exp">^</option>
-			</select>
-			<input type = "text" name = "Second Number" placeholder = "Second Number"><br><br>
-			<input type = "button" onclick = "calulate()" value = "Calulate" id = "buttonCalulate">
+				<input type = "text" name = "First Number" placeholder = "Number" class = "inputBox">
+				<select id = "functionSel">
+					<option value = "add">+</option>
+					<option value = "sub">-</option>
+					<option value = "mul">*</option>
+					<option value = "div">/</option>
+					<option value = "exp">^</option>
+				</select>
+				<input type = "text" name = "Second Number" placeholder = "Number" class = "inputBox"><br><br>
+				<input type = "button" onclick = "calulate()" value = "Calulate" id = "buttonCalulate">
 			</form>
-			<p id = "answer" style = "font-size:25px">=</p>
+			<p class = "answer" id = "simpleAnswer">=</p>
 			<br>
 			<button onclick = "functionReset()">Reset</button>
 		</div>
-    </body>    
+		<div id = "advanceCalulator" style = "display: none" class = "calulator">
+			<h2>Advance Calulator</h2>
+			<form id = "advanceCalulatorForm" autocomplete = "off">
+				<input type = "text" name = "advanceCalulatorEquation" placeholder = "Equation" class = "advInputBox" id = "equation"><br><br>
+				<input type = "button" onclick = "document.getElementById('advAnswer').innerHTML = math.eval(document.getElementById('equation').value)" value = "Calulate" id = "buttonCalulate">
+			</form>
+			<p class = "answer" id = "advAnswer">=</p>
+			<br>
+			<button onclick = "test()">Reset</button>
+		</div>
+    </body>	
 </html>

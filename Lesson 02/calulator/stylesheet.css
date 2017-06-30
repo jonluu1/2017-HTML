@@ -33,6 +33,24 @@ li{
 	display: inline;
 }
 
+.inputBox{
+	width: 200px;
+	height: 40px;
+	border: 4px;
+	font-size: 24px;
+}
+
+.advInputBox{
+	width: 400px;
+	height: 40px;
+	border: 4px;
+	font-size: 24px;
+}
+
+.answer{
+	font-size: 32px;
+}
+
 #welcome{
 	font-size: 24px;
 	text-align: center;
@@ -47,6 +65,17 @@ li{
 
 #simpleCalulator{
 	text-align: center;
+}
+
+#advanceCalulator{
+	text-align: center;
+}
+
+#functionSel{
+	width: 40px;
+	height: 40px;
+	border: 4px;
+	font-size: 24px;
 }
 
 #buttonCalulate{

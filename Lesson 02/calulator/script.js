@@ -25,7 +25,7 @@ function calulate(){
 	} else {
 		answer = "Enter Numbers Only Please...";
 	}
-	document.getElementById("answer").innerHTML = answer;
+	document.getElementById("simpleAnswer").innerHTML = answer;
 }
 
 function showHide(ID){
