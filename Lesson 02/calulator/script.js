@@ -2,7 +2,10 @@ function functionReset(){
 	document.getElementById("calulatorForm").reset();
 	document.getElementById("answer").innerHTML = "=";
 }
-
+function functionAdvReset(){
+	document.getElementById("advanceCalulatorForm").reset();
+	document.getElementById("advAnswer").innerHTML = "=";
+}
 function calulate(){
 	var form = document.getElementById("calulatorForm");
 	var firstNumber = parseInt(form.elements[0].value);
