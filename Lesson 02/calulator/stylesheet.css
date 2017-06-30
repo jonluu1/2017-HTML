@@ -1,0 +1,66 @@
+body {
+	background-color: #CFD8DC;
+	color: #212121;
+}
+
+h1{
+	font-size: 42px;
+	text-align: center;
+}
+
+h2{
+	font-size: 32px;
+	text-align: center;
+}
+
+button{
+	border: 2px solid #03A9F4;
+	background-color: #03A9F4;
+	padding: 15px 30px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.2s;
+	margin: 4px 2px;
+}
+
+button:hover{
+	background-color: #607D8B;
+	border: 2px solid #455A64;
+}
+
+li{
+	display: inline;
+}
+
+#welcome{
+	font-size: 24px;
+	text-align: center;
+}
+
+#navBar{
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#simpleCalulator{
+	text-align: center;
+}
+
+#buttonCalulate{
+	border: 2px solid #03A9F4;
+	background-color: #03A9F4;
+	padding: 10px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+#buttonCalulate:hover{
+	background-color: #607D8B;
+	border: 2px solid #455A64;
+}
+

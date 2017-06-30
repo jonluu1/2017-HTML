@@ -1,50 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Calulator</title> 
-        <script>
-        	function functionReset(){
-            	document.getElementById("calulatorForm").reset();
-            }
-        	
-        	function calulate(){
-            	var form = document.getElementById("calulatorForm");
-                var firstDigit = parseInt(form.elements[0].value);
-                var operator = form.elements[1].value;
-                var secondDigit = parseInt(form.elements[2].value);
-                var answer = 0;
-                
-                if (operator == "add"){
-                	answer = firstDigit + secondDigit;
-                } else if (operator === "sub"){
-                	answer = firstDigit - secondDigit;
-                } else if (operator === "mul"){
-                	answer = firstDigit * secondDigit;
-                } else if (operator === "div"){
-                	answer = firstDigit / secondDigit;
-                }
-                
-                document.getElementById("answer").innerHTML = "= " + answer;
- 
-            }
-        </script>
+        <title>Calulator</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src = "script.js"></script>
     </head>
     <body>
-    <h1>Calulator</h1>
-	<form id = "calulatorForm">
-    <input type = "text" name = "First Digit">
-    <select>
-    	<option value = "add">+</option>
-        <option value = "sub">-</option>
-        <option value = "mul">*</option>
-        <option value = "div">/</option>
-    </select>
-    <input type = "text" name = "Second Digit">
-    </form>
-    <p id = "answer" style = "font-size:25px">=</p>
-    <br>
-    <button onclick = "functionReset()">Reset</button>
-    <br>
-    <button onclick = "calulate()">Calulate</button>
+		<h1>Calulators</h1>
+		<ul id = "navBar">
+			<li><button onclick = "showHide('home')">Home</button>
+			<li><button onclick = "showHide('simpleCalulator')">Simple Calulator</button>
+			<li><button onclick = "showHide()">Advance Calulator</button>
+		</ul>
+		<div id = "home" class = "calulator">
+			<p id = "welcome">Welcome to the calulator website!  Click on button to go to that calulator!</p>
+		</div>
+		<div id = "simpleCalulator" style = "display: none" class = "calulator">
+			<h2>Simple Calulator</h2>
+			<form id = "calulatorForm" autocomplete = "off">
+			<input type = "text" name = "First Number" placeholder = "First Number">
+			<select>
+				<option value = "add">+</option>
+				<option value = "sub">-</option>
+				<option value = "mul">*</option>
+				<option value = "div">/</option>
+				<option value = "exp">^</option>
+			</select>
+			<input type = "text" name = "Second Number" placeholder = "Second Number"><br><br>
+			<input type = "button" onclick = "calulate()" value = "Calulate" id = "buttonCalulate">
+			</form>
+			<p id = "answer" style = "font-size:25px">=</p>
+			<br>
+			<button onclick = "functionReset()">Reset</button>
+		</div>
     </body>    
 </html>
