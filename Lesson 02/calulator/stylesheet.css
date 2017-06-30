@@ -71,6 +71,10 @@ li{
 	text-align: center;
 }
 
+#spCalulator1{
+	text-align: center;
+}
+
 #functionSel{
 	width: 40px;
 	height: 40px;
@@ -93,3 +97,7 @@ li{
 	border: 2px solid #455A64;
 }
 
+#distance{
+	text-align: center;
+	font-size: 24px;
+}

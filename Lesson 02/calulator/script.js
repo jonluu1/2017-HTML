@@ -31,6 +31,13 @@ function calulate(){
 	document.getElementById("simpleAnswer").innerHTML = answer;
 }
 
+function drt(){
+	var rate = document.getElementById('distanceRate').value;
+	var time = document.getElementById('distanceTime').value;
+	var dist = rate * time;
+	document.getElementById('distanceAnswer').innerHTML = dist + " meters";
+}
+
 function showHide(ID){
 	if (document.getElementById){
 	var showDiv = document.getElementById(ID);

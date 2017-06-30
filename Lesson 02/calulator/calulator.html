@@ -12,6 +12,7 @@
 			<li><button onclick = "showHide('home')">Home</button>
 			<li><button onclick = "showHide('simpleCalulator')">Simple Calulator</button>
 			<li><button onclick = "showHide('advanceCalulator')">Advance Calulator</button>
+			<li><button onclick = "showHide('spCalulator1')">Distance Calulator</button>
 		</ul>
 		<div id = "home" class = "calulator">
 			<p id = "welcome">Welcome to the calulator website!  Click on button to go to that calulator!</p>
@@ -43,6 +44,17 @@
 			<p class = "answer" id = "advAnswer">=</p>
 			<br>
 			<button onclick = "functionAdvReset()">Reset</button>
+		</div>
+		<div id = "spCalulator1" style = "display:none" class = "calulator">  
+			<h2>Distance Calulator</h2>
+			<form id = "spCalulatorForm1" autocomplete = "off">
+				<p id = "distance">d = </p>
+				<input type = "text" name = "distanceRate" placeholder = "rate in meter per sec" id = "distanceRate">
+				<input type = "text" name = "distanceTime" placeholder = "time sec" id = "distanceTime">
+			</form>
+			<button form = "spCalulatorForm1" onclick = "drt()">Calulate</button>
+			<br>
+			<p class = "answer" id = "distanceAnswer">=</p>
 		</div>
     </body>	
 </html>
